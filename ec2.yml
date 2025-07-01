@@ -5,12 +5,12 @@ Resources:
   EC2SecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
-      GroupDescription: Enable SSH and HTTP access
+      GroupDescription: Allow SSH 
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          cidr_ip: 0.0.0.0/0
+          CidrIp: 0.0.0.0/0 # ⚠️ Update this for better 
 
   EC2Instance:
     Type: AWS::EC2::Instance
